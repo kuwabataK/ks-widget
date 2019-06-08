@@ -31,6 +31,7 @@ declare global {
 declare namespace LocalJSX {
   interface KsWidget extends JSXBase.HTMLAttributes<HTMLKsWidgetElement> {
     'isLocked'?: boolean;
+    'onChangePosition'?: (event: CustomEvent<any>) => void;
     'position'?: Position;
   }
 

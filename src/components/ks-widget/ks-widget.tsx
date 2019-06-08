@@ -1,4 +1,4 @@
-import { Component, Prop, h, State } from '@stencil/core';
+import { Component, Prop, h, State, Watch, Event, EventEmitter } from '@stencil/core';
 import interact from 'interactjs';
 
 @Component({
@@ -17,7 +17,19 @@ export class KsWidget {
     height: '100px'
   }
 
+  @Event() changePosition: EventEmitter
+
   @Prop() isLocked: boolean = false
+
+  @Watch('isLocked')
+  changeLocked() {
+    if (this.isLocked) {
+      this.disableInteract()
+    } else {
+      this.disableInteract()
+      this.enableInteract()
+    }
+  }
 
   @State() _position: Position = {
     x: 0,
@@ -26,49 +38,32 @@ export class KsWidget {
     height: '100px'
   }
 
-  /**
- * コンポーネントロード時発火する関数
- */
   componentDidRender() {
     this._position = this.position
-    this.enableInteract()
+    if (!this.isLocked) {
+      this.enableInteract()
+    }
   }
 
+  componentDidUnload(){
+    this.disableInteract()
+  }
 
   private enableInteract() {
     interact(this.element).draggable({
-
-      // スナップするための設定
-      // modifiers: [
-      //   interact.modifiers.snap({
-      //     offset: { x: 20, y: 20 },
-      //     range: Infinity,
-      //     relativePoints: [{ x: 0, y: 0 }]
-      //   }),
-      // ],
 
       onmove: (event) => {
         // console.log(event)
         this._position.x = event.rect.left;
         this._position.y = event.rect.top;
-        this._position = {...this._position}
+        this._position = { ...this._position }
+        this.changePosition.emit(this._position)
       },
     }).resizable({
       // resize from all edges and corners
       edges: { left: true, right: true, bottom: true, top: true },
       preserveAspectRatio: false,
       inertia: true,
-
-      // スナップするための設定
-      // modifiers: [
-      //   interact.modifiers.snap({
-      //     targets: [
-      //       interact.createSnapGrid({ x: 30, y: 30 })
-      //     ],
-      //     range: Infinity,
-      //     relativePoints: [{ x: 0, y: 0 }]
-      //   }),
-      // ],
 
     }).on('resizemove', (event) => {
       // console.log(event)
@@ -78,9 +73,10 @@ export class KsWidget {
       this._position.x = event.rect.left;
       this._position.y = event.rect.top;
       this._position = { ...this._position }
+      this.changePosition.emit(this._position)
     })
   }
-  disableInteract() {
+  private disableInteract() {
     interact(this.element).unset();
   }
 
@@ -88,7 +84,7 @@ export class KsWidget {
     return `translate3D(${this._position.x}px, ${this._position.y}px, 0)`;
   }
 
-  styleString() {
+  private styleString() {
     return {
       transform: this.transformString(),
       width: this._position.width,
@@ -101,7 +97,6 @@ export class KsWidget {
     return <div ref={el => this.element = el as HTMLElement}
       style={this.styleString()}
     ><slot />
-      <h3>テスト</h3>
     </div>;
   }
 }

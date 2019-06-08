@@ -1,10 +1,4 @@
-import { e as registerInstance, f as h } from './ks-widget-57868f0b.js';
-
-var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-function commonjsRequire () {
-	throw new Error('Dynamic requires are not currently supported by rollup-plugin-commonjs');
-}
+import { d as registerInstance, e as createEvent, f as h } from './ks-widget-38d8d267.js';
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -12,10 +6,6 @@ function unwrapExports (x) {
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-function getCjsExportFromNamespace (n) {
-	return n && n['default'] || n;
 }
 
 var interact = createCommonjsModule(function (module, exports) {
@@ -26,16 +16,12 @@ var interact = createCommonjsModule(function (module, exports) {
  * Released under the MIT License.
  * https://raw.github.com/taye/interact.js/master/LICENSE
  */
-(function(f){if('object'==="object"&&'object'!=="undefined"){module.exports=f();}else if(typeof undefined==="function"&&undefined.amd){undefined([],f);}else{var g;if(typeof window!=="undefined"){g=window;}else if(typeof commonjsGlobal!=="undefined"){g=commonjsGlobal;}else if(typeof self!=="undefined"){g=self;}else{g=this;}g.interact = f();}})(function(){var define,module,exports;
-var createModuleFactory = function createModuleFactory(t){var e;return function(r){return e||t(e={exports:{},parent:r},e.exports),e.exports}};
+(function(f){{module.exports=f();}})(function(){var createModuleFactory = function createModuleFactory(t){var e;return function(r){return e||t(e={exports:{},parent:r},e.exports),e.exports}};
 var _$scope_24 = createModuleFactory(function (module, exports) {
-"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/* common-shake removed: exports.createScope = */ void createScope;
-/* common-shake removed: exports.initScope = */ void initScope;
 exports.Scope = exports.ActionName = void 0;
 
 var utils = _interopRequireWildcard(_$utils_55);
@@ -89,10 +75,6 @@ var ActionName;
 exports.ActionName = ActionName;
 
 (function (ActionName) {})(ActionName || (exports.ActionName = ActionName = {}));
-
-function createScope() {
-  return new Scope();
-}
 
 var Scope =
 /*#__PURE__*/
@@ -301,7 +283,6 @@ function initScope(scope, window) {
 
 });
 var _$interactions_23 = createModuleFactory(function (module, exports) {
-"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -311,8 +292,6 @@ exports["default"] = void 0;
 var _browser = _interopRequireDefault(_$browser_47);
 
 var _domObjects = _interopRequireDefault(_$domObjects_49);
-
-/* removed: var _$domUtils_50 = require("@interactjs/utils/domUtils"); */;
 
 var _events = _interopRequireDefault(_$events_51);
 
@@ -648,7 +627,6 @@ exports["default"] = _default;
 
 });
 var _$Interaction_18 = createModuleFactory(function (module, exports) {
-"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1227,7 +1205,6 @@ exports["default"] = _default;
 
 });
 var _$arr_46 = {};
-"use strict";
 
 Object.defineProperty(_$arr_46, "__esModule", {
   value: true
@@ -1278,7 +1255,6 @@ function find(array, func) {
 }
 
 var _$domObjects_49 = {};
-"use strict";
 
 Object.defineProperty(_$domObjects_49, "__esModule", {
   value: true
@@ -1319,7 +1295,6 @@ function init(window) {
 }
 
 var _$isWindow_57 = {};
-"use strict";
 
 Object.defineProperty(_$isWindow_57, "__esModule", {
   value: true
@@ -1333,7 +1308,6 @@ var ___default_57 = function _default(thing) {
 _$isWindow_57["default"] = ___default_57;
 
 var _$window_65 = {};
-"use strict";
 
 Object.defineProperty(_$window_65, "__esModule", {
   value: true
@@ -1388,7 +1362,6 @@ var ___default_65 = win;
 _$window_65["default"] = ___default_65;
 
 var _$is_56 = {};
-"use strict";
 
 Object.defineProperty(_$is_56, "__esModule", {
   value: true
@@ -1471,7 +1444,6 @@ var array = function array(thing) {
 _$is_56.array = array;
 
 var _$browser_47 = {};
-"use strict";
 
 Object.defineProperty(_$browser_47, "__esModule", {
   value: true
@@ -1539,7 +1511,6 @@ var ___default_47 = browser;
 _$browser_47["default"] = ___default_47;
 
 var _$domUtils_50 = {};
-"use strict";
 
 Object.defineProperty(_$domUtils_50, "__esModule", {
   value: true
@@ -1789,7 +1760,6 @@ function trySelector(value) {
 }
 
 var _$clone_48 = {};
-"use strict";
 
 Object.defineProperty(_$clone_48, "__esModule", {
   value: true
@@ -1821,7 +1791,6 @@ function clone(source) {
 }
 
 var _$pointerExtend_59 = {};
-"use strict";
 
 Object.defineProperty(_$pointerExtend_59, "__esModule", {
   value: true
@@ -1855,7 +1824,6 @@ var ___default_59 = pointerExtend;
 _$pointerExtend_59["default"] = ___default_59;
 
 var _$hypot_54 = {};
-"use strict";
 
 Object.defineProperty(_$hypot_54, "__esModule", {
   value: true
@@ -1869,7 +1837,6 @@ var ___default_54 = function _default(x, y) {
 _$hypot_54["default"] = ___default_54;
 
 var _$pointerUtils_60 = {};
-"use strict";
 
 Object.defineProperty(_$pointerUtils_60, "__esModule", {
   value: true
@@ -2139,14 +2106,11 @@ var ___default_60 = pointerUtils;
 _$pointerUtils_60["default"] = ___default_60;
 
 var _$events_51 = {};
-"use strict";
 
 Object.defineProperty(_$events_51, "__esModule", {
   value: true
 });
 _$events_51["default"] = _$events_51.FakeEvent = void 0;
-
-/* removed: var _$arr_46 = require("./arr"); */;
 
 var __domUtils_51 = ___interopRequireWildcard_51(_$domUtils_50);
 
@@ -2461,7 +2425,6 @@ var ___default_51 = events;
 _$events_51["default"] = ___default_51;
 
 var _$extend_52 = {};
-"use strict";
 
 Object.defineProperty(_$extend_52, "__esModule", {
   value: true
@@ -2477,7 +2440,6 @@ function extend(dest, source) {
 }
 
 var _$rect_62 = {};
-"use strict";
 
 Object.defineProperty(_$rect_62, "__esModule", {
   value: true
@@ -2488,8 +2450,6 @@ _$rect_62.rectToXY = rectToXY;
 _$rect_62.xywhToTlbr = xywhToTlbr;
 _$rect_62.tlbrToXywh = tlbrToXywh;
 _$rect_62["default"] = void 0;
-
-/* removed: var _$domUtils_50 = require("./domUtils"); */;
 
 var _extend = ___interopRequireDefault_62(_$extend_52);
 
@@ -2570,14 +2530,11 @@ var ___default_62 = {
 _$rect_62["default"] = ___default_62;
 
 var _$getOriginXY_53 = {};
-"use strict";
 
 Object.defineProperty(_$getOriginXY_53, "__esModule", {
   value: true
 });
 _$getOriginXY_53["default"] = ___default_53;
-
-/* removed: var _$rect_62 = require("./rect"); */;
 
 function ___default_53(target, element, action) {
   var actionOptions = target.options[action];
@@ -2591,7 +2548,6 @@ function ___default_53(target, element, action) {
 }
 
 var _$normalizeListeners_58 = {};
-"use strict";
 
 Object.defineProperty(_$normalizeListeners_58, "__esModule", {
   value: true
@@ -2653,7 +2609,6 @@ function split(type) {
 }
 
 var _$raf_61 = {};
-"use strict";
 
 Object.defineProperty(_$raf_61, "__esModule", {
   value: true
@@ -2709,7 +2664,6 @@ var ___default_61 = {
 _$raf_61["default"] = ___default_61;
 
 var _$Signals_45 = {};
-"use strict";
 
 Object.defineProperty(_$Signals_45, "__esModule", {
   value: true
@@ -2783,7 +2737,6 @@ var ___default_45 = Signals;
 _$Signals_45["default"] = ___default_45;
 
 var _$utils_55 = {};
-"use strict";
 
 Object.defineProperty(_$utils_55, "__esModule", {
   value: true
@@ -2948,7 +2901,6 @@ function copyAction(dest, src) {
 }
 
 var _$defaultOptions_20 = {};
-"use strict";
 
 Object.defineProperty(_$defaultOptions_20, "__esModule", {
   value: true
@@ -2974,7 +2926,6 @@ var ___default_20 = defaults;
 _$defaultOptions_20["default"] = ___default_20;
 
 var _$Eventable_14 = {};
-"use strict";
 
 Object.defineProperty(_$Eventable_14, "__esModule", {
   value: true
@@ -3083,7 +3034,6 @@ var ___default_14 = Eventable;
 _$Eventable_14["default"] = ___default_14;
 
 var _$Interactable_16 = {};
-"use strict";
 
 Object.defineProperty(_$Interactable_16, "__esModule", {
   value: true
@@ -3096,8 +3046,6 @@ var ___browser_16 = ___interopRequireDefault_16(_$browser_47);
 
 var ___clone_16 = ___interopRequireDefault_16(_$clone_48);
 
-/* removed: var _$domUtils_50 = require("@interactjs/utils/domUtils"); */;
-
 var ___events_16 = ___interopRequireDefault_16(_$events_51);
 
 var ___extend_16 = ___interopRequireDefault_16(_$extend_52);
@@ -3105,8 +3053,6 @@ var ___extend_16 = ___interopRequireDefault_16(_$extend_52);
 var __is_16 = ___interopRequireWildcard_16(_$is_56);
 
 var ___normalizeListeners_16 = ___interopRequireDefault_16(_$normalizeListeners_58);
-
-/* removed: var _$window_65 = require("@interactjs/utils/window"); */;
 
 var _Eventable = ___interopRequireDefault_16(_$Eventable_14);
 
@@ -3527,7 +3473,6 @@ var ___default_16 = Interactable;
 _$Interactable_16["default"] = ___default_16;
 
 var _$InteractableSet_17 = {};
-"use strict";
 
 Object.defineProperty(_$InteractableSet_17, "__esModule", {
   value: true
@@ -3671,7 +3616,6 @@ function () {
 _$InteractableSet_17["default"] = InteractableSet;
 
 var _$BaseEvent_13 = {};
-"use strict";
 
 Object.defineProperty(_$BaseEvent_13, "__esModule", {
   value: true
@@ -3741,7 +3685,6 @@ var ___default_13 = BaseEvent;
 _$BaseEvent_13["default"] = ___default_13;
 
 var _$InteractEvent_15 = {};
-"use strict";
 
 Object.defineProperty(_$InteractEvent_15, "__esModule", {
   value: true
@@ -3992,7 +3935,6 @@ var ___default_15 = InteractEvent;
 _$InteractEvent_15["default"] = ___default_15;
 
 var _$PointerInfo_19 = {};
-"use strict";
 
 Object.defineProperty(_$PointerInfo_19, "__esModule", {
   value: true
@@ -4016,7 +3958,6 @@ var ___default_19 = PointerInfo;
 _$PointerInfo_19["default"] = ___default_19;
 
 var _$interactionFinder_22 = {};
-"use strict";
 
 Object.defineProperty(_$interactionFinder_22, "__esModule", {
   value: true
@@ -4193,7 +4134,6 @@ var ___default_22 = finder;
 _$interactionFinder_22["default"] = ___default_22;
 
 var _$drag_1 = {};
-"use strict";
 
 Object.defineProperty(_$drag_1, "__esModule", {
   value: true
@@ -4357,7 +4297,6 @@ var ___default_1 = drag;
 _$drag_1["default"] = ___default_1;
 
 var _$DropEvent_2 = {};
-"use strict";
 
 Object.defineProperty(_$DropEvent_2, "__esModule", {
   value: true
@@ -4493,7 +4432,6 @@ var ___default_2 = DropEvent;
 _$DropEvent_2["default"] = ___default_2;
 
 var _$drop_3 = {};
-"use strict";
 
 Object.defineProperty(_$drop_3, "__esModule", {
   value: true
@@ -5032,7 +4970,6 @@ var ___default_3 = drop;
 _$drop_3["default"] = ___default_3;
 
 var _$gesture_4 = {};
-"use strict";
 
 Object.defineProperty(_$gesture_4, "__esModule", {
   value: true
@@ -5190,7 +5127,6 @@ var ___default_4 = gesture;
 _$gesture_4["default"] = ___default_4;
 
 var _$resize_6 = {};
-"use strict";
 
 Object.defineProperty(_$resize_6, "__esModule", {
   value: true
@@ -5659,7 +5595,6 @@ var ___default_6 = resize;
 _$resize_6["default"] = ___default_6;
 
 var _$actions_5 = {};
-"use strict";
 
 Object.defineProperty(_$actions_5, "__esModule", {
   value: true
@@ -5712,7 +5647,6 @@ var id = 'actions';
 _$actions_5.id = id;
 
 var _$autoScroll_7 = {};
-"use strict";
 
 Object.defineProperty(_$autoScroll_7, "__esModule", {
   value: true
@@ -5728,10 +5662,6 @@ var __domUtils_7 = ___interopRequireWildcard_7(_$domUtils_50);
 var __is_7 = ___interopRequireWildcard_7(_$is_56);
 
 var ___raf_7 = ___interopRequireDefault_7(_$raf_61);
-
-/* removed: var _$rect_62 = require("@interactjs/utils/rect"); */;
-
-/* removed: var _$window_65 = require("@interactjs/utils/window"); */;
 
 function ___interopRequireDefault_7(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -5968,14 +5898,11 @@ var ___default_7 = {
 _$autoScroll_7["default"] = ___default_7;
 
 var _$InteractableMethods_8 = {};
-"use strict";
 
 Object.defineProperty(_$InteractableMethods_8, "__esModule", {
   value: true
 });
 _$InteractableMethods_8["default"] = void 0;
-
-/* removed: var _$utils_55 = require("@interactjs/utils"); */;
 
 var __is_8 = ___interopRequireWildcard_8(_$is_56);
 
@@ -6166,7 +6093,6 @@ var ___default_8 = {
 _$InteractableMethods_8["default"] = ___default_8;
 
 var _$base_9 = {};
-"use strict";
 
 Object.defineProperty(_$base_9, "__esModule", {
   value: true
@@ -6452,7 +6378,6 @@ var ___default_9 = {
 _$base_9["default"] = ___default_9;
 
 var _$dragAxis_10 = {};
-"use strict";
 
 Object.defineProperty(_$dragAxis_10, "__esModule", {
   value: true
@@ -6460,8 +6385,6 @@ Object.defineProperty(_$dragAxis_10, "__esModule", {
 _$dragAxis_10["default"] = void 0;
 
 var ___scope_10 = _$scope_24({});
-
-/* removed: var _$domUtils_50 = require("@interactjs/utils/domUtils"); */;
 
 var __is_10 = ___interopRequireWildcard_10(_$is_56);
 
@@ -6546,7 +6469,6 @@ var ___default_10 = {
 _$dragAxis_10["default"] = ___default_10;
 
 var _$hold_11 = {};
-"use strict";
 
 Object.defineProperty(_$hold_11, "__esModule", {
   value: true
@@ -6615,7 +6537,6 @@ var ___default_11 = {
 _$hold_11["default"] = ___default_11;
 
 var _$autoStart_12 = {};
-"use strict";
 
 Object.defineProperty(_$autoStart_12, "__esModule", {
   value: true
@@ -6659,7 +6580,6 @@ var __id_12 = 'auto-start';
 _$autoStart_12.id = __id_12;
 
 var _$interactablePreventDefault_21 = {};
-"use strict";
 
 Object.defineProperty(_$interactablePreventDefault_21, "__esModule", {
   value: true
@@ -6667,13 +6587,9 @@ Object.defineProperty(_$interactablePreventDefault_21, "__esModule", {
 _$interactablePreventDefault_21.install = __install_21;
 _$interactablePreventDefault_21["default"] = void 0;
 
-/* removed: var _$domUtils_50 = require("@interactjs/utils/domUtils"); */;
-
 var ___events_21 = ___interopRequireDefault_21(_$events_51);
 
 var __is_21 = ___interopRequireWildcard_21(_$is_56);
-
-/* removed: var _$window_65 = require("@interactjs/utils/window"); */;
 
 function ___interopRequireWildcard_21(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
@@ -6792,7 +6708,6 @@ var ___default_21 = {
 _$interactablePreventDefault_21["default"] = ___default_21;
 
 var _$devTools_25 = {};
-"use strict";
 
 Object.defineProperty(_$devTools_25, "__esModule", {
   value: true
@@ -6800,8 +6715,6 @@ Object.defineProperty(_$devTools_25, "__esModule", {
 _$devTools_25["default"] = void 0;
 
 var ___domObjects_25 = ___interopRequireDefault_25(_$domObjects_49);
-
-/* removed: var _$domUtils_50 = require("@interactjs/utils/domUtils"); */;
 
 var ___extend_25 = ___interopRequireDefault_25(_$extend_52);
 
@@ -6813,14 +6726,6 @@ function ___interopRequireWildcard_25(obj) { if (obj && obj.__esModule) { return
 
 function ___interopRequireDefault_25(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function ___toConsumableArray_25(arr) { return ___arrayWithoutHoles_25(arr) || ___iterableToArray_25(arr) || ___nonIterableSpread_25(); }
-
-function ___nonIterableSpread_25() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function ___iterableToArray_25(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function ___arrayWithoutHoles_25(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 var CheckName;
 
 (function (CheckName) {
@@ -6829,122 +6734,15 @@ var CheckName;
   CheckName["noListeners"] = "";
 })(CheckName || (CheckName = {}));
 
-var prefix = '[interact.js] ';
-var links = {
-  touchAction: 'https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action',
-  boxSizing: 'https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'
-};
-var isProduction = "production" === 'production'; // eslint-disable-next-line no-restricted-syntax
-
-function __install_25(scope) {
-  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-      logger = _ref.logger;
-
-  var interactions = scope.interactions,
-      Interactable = scope.Interactable,
-      defaults = scope.defaults;
-  logger = logger || console;
-  interactions.signals.on('action-start', function (_ref2) {
-    var interaction = _ref2.interaction;
-
-    for (var _i = 0; _i < checks.length; _i++) {
-      var _ref3;
-
-      _ref3 = checks[_i];
-      var check = _ref3;
-      var options = interaction.interactable && interaction.interactable.options[interaction.prepared.name];
-
-      if (!(options && options.devTools && options.devTools.ignore[check.name]) && check.perform(interaction)) {
-        var _logger;
-
-        (_logger = logger).warn.apply(_logger, [prefix + check.text].concat(___toConsumableArray_25(check.getInfo(interaction))));
-      }
-    }
-  });
-  defaults.base.devTools = {
-    ignore: {}
-  };
-
-  Interactable.prototype.devTools = function (options) {
-    if (options) {
-      (0, ___extend_25["default"])(this.options.devTools, options);
-      return this;
-    }
-
-    return this.options.devTools;
-  };
-}
-
-var checks = [{
-  name: 'touchAction',
-  perform: function perform(_ref4) {
-    var element = _ref4.element;
-    return !parentHasStyle(element, 'touchAction', /pan-|pinch|none/);
-  },
-  getInfo: function getInfo(_ref5) {
-    var element = _ref5.element;
-    return [element, links.touchAction];
-  },
-  text: 'Consider adding CSS "touch-action: none" to this element\n'
-}, {
-  name: 'boxSizing',
-  perform: function perform(interaction) {
-    var element = interaction.element;
-    return interaction.prepared.name === 'resize' && element instanceof ___domObjects_25["default"].HTMLElement && !hasStyle(element, 'boxSizing', /border-box/);
-  },
-  text: 'Consider adding CSS "box-sizing: border-box" to this resizable element',
-  getInfo: function getInfo(_ref6) {
-    var element = _ref6.element;
-    return [element, links.boxSizing];
-  }
-}, {
-  name: 'noListeners',
-  perform: function perform(interaction) {
-    var actionName = interaction.prepared.name;
-    var moveListeners = interaction.interactable.events.types["".concat(actionName, "move")] || [];
-    return !moveListeners.length;
-  },
-  getInfo: function getInfo(interaction) {
-    return [interaction.prepared.name, interaction.interactable];
-  },
-  text: 'There are no listeners set for this action'
-}];
-
-function hasStyle(element, prop, styleRe) {
-  return styleRe.test(element.style[prop] || ___window_25["default"].window.getComputedStyle(element)[prop]);
-}
-
-function parentHasStyle(element, prop, styleRe) {
-  var parent = element;
-
-  while (__is_25.element(parent)) {
-    if (hasStyle(parent, prop, styleRe)) {
-      return true;
-    }
-
-    parent = (0, _$domUtils_50.parentNode)(parent);
-  }
-
-  return false;
-}
-
 var __id_25 = 'dev-tools';
-var defaultExport = isProduction ? {
+var defaultExport = {
   id: __id_25,
   install: function install() {}
-} : {
-  id: __id_25,
-  install: __install_25,
-  checks: checks,
-  CheckName: CheckName,
-  links: links,
-  prefix: prefix
 };
 var ___default_25 = defaultExport;
 _$devTools_25["default"] = ___default_25;
 
 var _$base_30 = {};
-"use strict";
 
 Object.defineProperty(_$base_30, "__esModule", {
   value: true
@@ -7412,14 +7210,11 @@ var ___default_30 = {
 _$base_30["default"] = ___default_30;
 
 var _$inertia_26 = {};
-"use strict";
 
 Object.defineProperty(_$inertia_26, "__esModule", {
   value: true
 });
 _$inertia_26["default"] = void 0;
-
-/* removed: var _$InteractEvent_15 = require("@interactjs/core/InteractEvent"); */;
 
 var ___base_26 = ___interopRequireDefault_26(_$base_30);
 
@@ -7717,7 +7512,6 @@ var ___default_26 = {
 _$inertia_26["default"] = ___default_26;
 
 var _$pointer_33 = {};
-"use strict";
 
 Object.defineProperty(_$pointer_33, "__esModule", {
   value: true
@@ -7799,7 +7593,6 @@ var ___default_33 = restrict;
 _$pointer_33["default"] = ___default_33;
 
 var _$edges_32 = {};
-"use strict";
 
 Object.defineProperty(_$edges_32, "__esModule", {
   value: true
@@ -7924,7 +7717,6 @@ var ___default_32 = restrictEdges;
 _$edges_32["default"] = ___default_32;
 
 var _$size_34 = {};
-"use strict";
 
 Object.defineProperty(_$size_34, "__esModule", {
   value: true
@@ -8017,7 +7809,6 @@ var ___default_34 = restrictSize;
 _$size_34["default"] = ___default_34;
 
 var _$pointer_36 = {};
-"use strict";
 
 Object.defineProperty(_$pointer_36, "__esModule", {
   value: true
@@ -8196,7 +7987,6 @@ var ___default_36 = snap;
 _$pointer_36["default"] = ___default_36;
 
 var _$size_37 = {};
-"use strict";
 
 Object.defineProperty(_$size_37, "__esModule", {
   value: true
@@ -8322,7 +8112,6 @@ var ___default_37 = snapSize;
 _$size_37["default"] = ___default_37;
 
 var _$edges_35 = {};
-"use strict";
 
 Object.defineProperty(_$edges_35, "__esModule", {
   value: true
@@ -8393,7 +8182,6 @@ var ___default_35 = snapEdges;
 _$edges_35["default"] = ___default_35;
 
 var _$modifiers_31 = {};
-"use strict";
 
 Object.defineProperty(_$modifiers_31, "__esModule", {
   value: true
@@ -8431,7 +8219,6 @@ var __restrictSize_31 = __makeModifier_31(___size_31["default"], 'restrictSize')
 _$modifiers_31.restrictSize = __restrictSize_31;
 
 var _$PointerEvent_38 = {};
-"use strict";
 
 Object.defineProperty(_$PointerEvent_38, "__esModule", {
   value: true
@@ -8541,7 +8328,6 @@ function (_BaseEvent) {
 _$PointerEvent_38["default"] = PointerEvent;
 
 var _$base_39 = {};
-"use strict";
 
 Object.defineProperty(_$base_39, "__esModule", {
   value: true
@@ -8844,7 +8630,6 @@ var ___default_39 = pointerEvents;
 _$base_39["default"] = ___default_39;
 
 var _$holdRepeat_40 = {};
-"use strict";
 
 Object.defineProperty(_$holdRepeat_40, "__esModule", {
   value: true
@@ -8932,14 +8717,11 @@ var ___default_40 = {
 _$holdRepeat_40["default"] = ___default_40;
 
 var _$interactableTargets_42 = {};
-"use strict";
 
 Object.defineProperty(_$interactableTargets_42, "__esModule", {
   value: true
 });
 _$interactableTargets_42["default"] = void 0;
-
-/* removed: var _$arr_46 = require("@interactjs/utils/arr"); */;
 
 var ___extend_42 = ___interopRequireDefault_42(_$extend_52);
 
@@ -9010,7 +8792,6 @@ var ___default_42 = {
 _$interactableTargets_42["default"] = ___default_42;
 
 var _$pointerEvents_41 = {};
-"use strict";
 
 Object.defineProperty(_$pointerEvents_41, "__esModule", {
   value: true
@@ -9054,17 +8835,12 @@ var __id_41 = 'pointer-events';
 _$pointerEvents_41.id = __id_41;
 
 var _$reflow_43 = {};
-"use strict";
 
 Object.defineProperty(_$reflow_43, "__esModule", {
   value: true
 });
 _$reflow_43.install = __install_43;
 _$reflow_43["default"] = void 0;
-
-/* removed: var _$InteractEvent_15 = require("@interactjs/core/InteractEvent"); */;
-
-/* removed: var _$utils_55 = require("@interactjs/utils"); */;
 
 _$InteractEvent_15.EventPhase.Reflow = 'reflow';
 
@@ -9226,7 +9002,6 @@ var ___default_43 = {
 _$reflow_43["default"] = ___default_43;
 
 var _$interact_28 = {};
-"use strict";
 
 Object.defineProperty(_$interact_28, "__esModule", {
   value: true
@@ -9551,7 +9326,6 @@ var ___default_28 = interact;
 _$interact_28["default"] = ___default_28;
 
 var _$interact_27 = {};
-"use strict";
 
 Object.defineProperty(_$interact_27, "__esModule", {
   value: true
@@ -9660,11 +9434,6 @@ function __init_27(window) {
 
   _interact["default"].use(_reflow["default"]); // eslint-disable-next-line no-undef
 
-
-  if ("production" !== 'production') {
-    _interact["default"].use(_devTools["default"]);
-  }
-
   return _interact["default"];
 } // eslint-disable-next-line no-undef
 
@@ -9673,12 +9442,7 @@ _interact["default"].version = "1.4.9";
 var ___default_27 = _interact["default"];
 _$interact_27["default"] = ___default_27;
 
-var _$types_44 = {};
-/// <reference path="./types.d.ts" />
-"use strict";
-
 var _$grid_63 = {};
-"use strict";
 
 Object.defineProperty(_$grid_63, "__esModule", {
   value: true
@@ -9743,7 +9507,6 @@ var ___default_63 = createGrid;
 _$grid_63["default"] = ___default_63;
 
 var _$snappers_64 = {};
-"use strict";
 
 Object.defineProperty(_$snappers_64, "__esModule", {
   value: true
@@ -9760,7 +9523,6 @@ var _grid = ___interopRequireDefault_64(_$grid_63);
 function ___interopRequireDefault_64(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _$index_29 = { exports: {} };
-"use strict";
 
 Object.defineProperty(_$index_29.exports, "__esModule", {
   value: true
@@ -9771,8 +9533,6 @@ _$index_29.exports["default"] = void 0;
 var ___interact_29 = ___interopRequireWildcard_29(_$interact_27);
 
 var __modifiers_29 = ___interopRequireWildcard_29(_$modifiers_31);
-
-_$types_44;
 
 var ___extend_29 = ___interopRequireDefault_29(_$extend_52);
 
@@ -9806,7 +9566,7 @@ ___interact_29["default"]['default'] = ___interact_29["default"]; // tslint:disa
 
 ___interact_29["default"]['init'] = __init_29; // tslint:disable-line no-string-literal
 
-if (("object" === "undefined" ? "undefined" : ___typeof_29(_$index_29)) === 'object' && !!_$index_29) {
+if ((___typeof_29(_$index_29)) === 'object' && !!_$index_29) {
   _$index_29.exports = ___interact_29["default"];
 }
 
@@ -9816,7 +9576,7 @@ return _$index_29;
 });
 
 
-//# sourceMappingURL=interact.js.map
+
 });
 
 const interact$1 = unwrapExports(interact);
@@ -9837,29 +9597,34 @@ class KsWidget {
             width: '100px',
             height: '100px'
         };
+        this.changePosition = createEvent(this, "changePosition", 7);
     }
-    /**
-   * コンポーネントロード時発火する関数
-   */
+    changeLocked() {
+        if (this.isLocked) {
+            this.disableInteract();
+        }
+        else {
+            this.disableInteract();
+            this.enableInteract();
+        }
+    }
     componentDidRender() {
         this._position = this.position;
-        this.enableInteract();
+        if (!this.isLocked) {
+            this.enableInteract();
+        }
+    }
+    componentDidUnload() {
+        this.disableInteract();
     }
     enableInteract() {
         interact$1(this.element).draggable({
-            // スナップするための設定
-            // modifiers: [
-            //   interact.modifiers.snap({
-            //     offset: { x: 20, y: 20 },
-            //     range: Infinity,
-            //     relativePoints: [{ x: 0, y: 0 }]
-            //   }),
-            // ],
             onmove: (event) => {
                 // console.log(event)
                 this._position.x = event.rect.left;
                 this._position.y = event.rect.top;
                 this._position = Object.assign({}, this._position);
+                this.changePosition.emit(this._position);
             },
         }).resizable({
             // resize from all edges and corners
@@ -9873,6 +9638,7 @@ class KsWidget {
             this._position.x = event.rect.left;
             this._position.y = event.rect.top;
             this._position = Object.assign({}, this._position);
+            this.changePosition.emit(this._position);
         });
     }
     disableInteract() {
@@ -9889,8 +9655,11 @@ class KsWidget {
         };
     }
     render() {
-        return h("div", { ref: el => this.element = el, style: this.styleString() }, h("slot", null), h("h3", null, "\u30C6\u30B9\u30C8"));
+        return h("div", { ref: el => this.element = el, style: this.styleString() }, h("slot", null));
     }
+    static get watchers() { return {
+        "isLocked": ["changeLocked"]
+    }; }
     static get style() { return ""; }
 }
 

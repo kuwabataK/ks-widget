@@ -1,20 +1,17 @@
+import { EventEmitter } from '../../stencil.core';
 export declare class KsWidget {
     private element?;
     position: Position;
+    changePosition: EventEmitter;
     isLocked: boolean;
+    changeLocked(): void;
     _position: Position;
-    /**
-   * コンポーネントロード時発火する関数
-   */
     componentDidRender(): void;
+    componentDidUnload(): void;
     private enableInteract;
-    disableInteract(): void;
+    private disableInteract;
     private transformString;
-    styleString(): {
-        transform: string;
-        width: string;
-        height: string;
-    };
+    private styleString;
     render(): any;
 }
 interface Position {
