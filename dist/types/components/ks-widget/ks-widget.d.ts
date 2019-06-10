@@ -8,7 +8,7 @@ export declare class KsWidget {
     changeLocked(): void;
     _position: Position;
     componentWillLoad(): void;
-    componentDidRender(): void;
+    componentDidLoad(): void;
     componentDidUnload(): void;
     private enableInteract;
     private disableInteract;

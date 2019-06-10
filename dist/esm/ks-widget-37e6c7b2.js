@@ -1,4 +1,4 @@
-const BUILD = {"allRenderFn":true,"cmpDidLoad":false,"cmpDidUnload":true,"cmpDidUpdate":false,"cmpDidRender":true,"cmpWillLoad":true,"cmpWillUpdate":false,"cmpWillRender":false,"connectedCallback":false,"disconnectedCallback":false,"element":false,"event":true,"hasRenderFn":true,"lifecycle":true,"hostListener":false,"hostListenerTargetWindow":false,"hostListenerTargetDocument":false,"hostListenerTargetBody":false,"hostListenerTargetParent":false,"hostListenerTarget":false,"member":true,"method":false,"mode":false,"noVdomRender":false,"observeAttribute":true,"prop":true,"propBoolean":true,"propNumber":false,"propString":false,"propMutable":false,"reflect":false,"scoped":false,"shadowDom":false,"slot":true,"slotRelocation":true,"state":true,"style":true,"svg":false,"updatable":true,"vdomAttribute":true,"vdomClass":true,"vdomFunctional":true,"vdomKey":true,"vdomListener":true,"vdomRef":true,"vdomRender":true,"vdomStyle":true,"vdomText":true,"watchCallback":true,"taskQueue":true,"lazyLoad":true,"hydrateServerSide":false,"cssVarShim":true,"hydrateClientSide":false,"isDebug":false,"isDev":false,"lifecycleDOMEvents":false,"profile":false,"hotModuleReplacement":false,"constructableCSS":true,"cssAnnotations":true};
+const BUILD = {"allRenderFn":true,"cmpDidLoad":true,"cmpDidUnload":true,"cmpDidUpdate":false,"cmpDidRender":false,"cmpWillLoad":true,"cmpWillUpdate":false,"cmpWillRender":false,"connectedCallback":false,"disconnectedCallback":false,"element":false,"event":true,"hasRenderFn":true,"lifecycle":true,"hostListener":false,"hostListenerTargetWindow":false,"hostListenerTargetDocument":false,"hostListenerTargetBody":false,"hostListenerTargetParent":false,"hostListenerTarget":false,"member":true,"method":false,"mode":false,"noVdomRender":false,"observeAttribute":true,"prop":true,"propBoolean":true,"propNumber":false,"propString":false,"propMutable":false,"reflect":false,"scoped":false,"shadowDom":false,"slot":true,"slotRelocation":true,"state":true,"style":true,"svg":false,"updatable":true,"vdomAttribute":true,"vdomClass":true,"vdomFunctional":true,"vdomKey":true,"vdomListener":true,"vdomRef":true,"vdomRender":true,"vdomStyle":true,"vdomText":true,"watchCallback":true,"taskQueue":true,"lazyLoad":true,"hydrateServerSide":false,"cssVarShim":true,"hydrateClientSide":false,"isDebug":false,"isDev":false,"lifecycleDOMEvents":false,"profile":false,"hotModuleReplacement":false,"constructableCSS":true,"cssAnnotations":true};
 const NAMESPACE = 'ks-widget';
 
 const win = window;
@@ -1056,15 +1056,15 @@ const postUpdateComponent = (elm, hostRef, ancestorsActivelyLoadingChildren) => 
     if (!elm['s-al']) {
         const instance = hostRef.$lazyInstance$;
         const ancestorComponent = hostRef.$ancestorComponent$;
-        {
-            safeCall(instance, 'componentDidRender');
-        }
         if (!(hostRef.$flags$ & 512 /* hasLoadedComponent */)) {
             hostRef.$flags$ |= 512 /* hasLoadedComponent */;
             {
                 // DOM WRITE!
                 // add the css class that this element has officially hydrated
                 elm.classList.add(HYDRATED_CLASS);
+            }
+            {
+                safeCall(instance, 'componentDidLoad');
             }
             {
                 hostRef.$onReadyResolve$(elm);

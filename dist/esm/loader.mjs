@@ -1,4 +1,4 @@
-import { c as patchEsm, b as bootstrapLazy } from './ks-widget-54513e1e.js';
+import { c as patchEsm, b as bootstrapLazy } from './ks-widget-37e6c7b2.js';
 
 const defineCustomElements = (win, options) => {
   return patchEsm().then(() => {

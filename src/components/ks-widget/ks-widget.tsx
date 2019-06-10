@@ -45,7 +45,7 @@ export class KsWidget {
   componentWillLoad() {
     this._position = { ...this.position }
   }
-  componentDidRender() {
+  componentDidLoad() {
     if (!this.isLocked) {
       this.enableInteract()
     }

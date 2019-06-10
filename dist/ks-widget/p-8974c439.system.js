@@ -1,0 +1,1 @@
+System.register(["./p-96dc0c24.system.js"],function(t,e){"use strict";var s,i;return{setters:[function(t){s=t.a;i=t.b}],execute:function(){s().then(function(t){return i([["p-gymkt55b.system",[[4,"ks-widget",{position:[16],isLocked:[4,"is-locked"],_position:[32]}]]]],{resourcesUrl:t})})}}});

@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const __chunk_1 = require('./ks-widget-740e5987.js');
+const __chunk_1 = require('./ks-widget-61d178d3.js');
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -9618,7 +9618,7 @@ class KsWidget {
     componentWillLoad() {
         this._position = Object.assign({}, this.position);
     }
-    componentDidRender() {
+    componentDidLoad() {
         if (!this.isLocked) {
             this.enableInteract();
         }

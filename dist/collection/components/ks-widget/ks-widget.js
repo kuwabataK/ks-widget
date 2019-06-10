@@ -31,7 +31,7 @@ export class KsWidget {
     componentWillLoad() {
         this._position = Object.assign({}, this.position);
     }
-    componentDidRender() {
+    componentDidLoad() {
         if (!this.isLocked) {
             this.enableInteract();
         }

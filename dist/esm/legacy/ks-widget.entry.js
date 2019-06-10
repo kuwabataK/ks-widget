@@ -1,4 +1,4 @@
-import { d as registerInstance, e as createEvent, f as h } from './ks-widget-54513e1e.js';
+import { d as registerInstance, e as createEvent, f as h } from './ks-widget-37e6c7b2.js';
 function unwrapExports(x) {
     return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
@@ -8626,7 +8626,7 @@ var KsWidget = /** @class */ (function () {
     KsWidget.prototype.componentWillLoad = function () {
         this._position = Object.assign({}, this.position);
     };
-    KsWidget.prototype.componentDidRender = function () {
+    KsWidget.prototype.componentDidLoad = function () {
         if (!this.isLocked) {
             this.enableInteract();
         }
