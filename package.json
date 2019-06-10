@@ -21,7 +21,6 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
-    "@interactjs/types": "^1.4.9",
     "@stencil/core": "1.0.0-beta.8"
   },
   "license": "MIT",
