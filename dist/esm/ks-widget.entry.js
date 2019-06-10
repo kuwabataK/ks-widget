@@ -1,4 +1,4 @@
-import { d as registerInstance, e as createEvent, f as h } from './ks-widget-38d8d267.js';
+import { d as registerInstance, e as createEvent, f as h } from './ks-widget-54513e1e.js';
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -9599,6 +9599,9 @@ class KsWidget {
         };
         this.changePosition = createEvent(this, "changePosition", 7);
     }
+    changePropPosition() {
+        this._position = Object.assign({}, this.position);
+    }
     changeLocked() {
         if (this.isLocked) {
             this.disableInteract();
@@ -9608,8 +9611,10 @@ class KsWidget {
             this.enableInteract();
         }
     }
+    componentWillLoad() {
+        this._position = Object.assign({}, this.position);
+    }
     componentDidRender() {
-        this._position = this.position;
         if (!this.isLocked) {
             this.enableInteract();
         }
@@ -9658,6 +9663,7 @@ class KsWidget {
         return h("div", { ref: el => this.element = el, style: this.styleString() }, h("slot", null));
     }
     static get watchers() { return {
+        "position": ["changePropPosition"],
         "isLocked": ["changeLocked"]
     }; }
     static get style() { return ""; }

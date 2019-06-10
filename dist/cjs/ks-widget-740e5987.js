@@ -1,6 +1,6 @@
 'use strict';
 
-const BUILD = {"allRenderFn":true,"cmpDidLoad":false,"cmpDidUnload":true,"cmpDidUpdate":false,"cmpDidRender":true,"cmpWillLoad":false,"cmpWillUpdate":false,"cmpWillRender":false,"connectedCallback":false,"disconnectedCallback":false,"element":false,"event":true,"hasRenderFn":true,"lifecycle":true,"hostListener":false,"hostListenerTargetWindow":false,"hostListenerTargetDocument":false,"hostListenerTargetBody":false,"hostListenerTargetParent":false,"hostListenerTarget":false,"member":true,"method":false,"mode":false,"noVdomRender":false,"observeAttribute":true,"prop":true,"propBoolean":true,"propNumber":false,"propString":false,"propMutable":false,"reflect":false,"scoped":false,"shadowDom":false,"slot":true,"slotRelocation":true,"state":true,"style":true,"svg":false,"updatable":true,"vdomAttribute":true,"vdomClass":true,"vdomFunctional":true,"vdomKey":true,"vdomListener":true,"vdomRef":true,"vdomRender":true,"vdomStyle":true,"vdomText":true,"watchCallback":true,"taskQueue":true,"lazyLoad":true,"hydrateServerSide":false,"cssVarShim":true,"hydrateClientSide":false,"isDebug":false,"isDev":false,"lifecycleDOMEvents":false,"profile":false,"hotModuleReplacement":false,"constructableCSS":true,"cssAnnotations":true};
+const BUILD = {"allRenderFn":true,"cmpDidLoad":false,"cmpDidUnload":true,"cmpDidUpdate":false,"cmpDidRender":true,"cmpWillLoad":true,"cmpWillUpdate":false,"cmpWillRender":false,"connectedCallback":false,"disconnectedCallback":false,"element":false,"event":true,"hasRenderFn":true,"lifecycle":true,"hostListener":false,"hostListenerTargetWindow":false,"hostListenerTargetDocument":false,"hostListenerTargetBody":false,"hostListenerTargetParent":false,"hostListenerTarget":false,"member":true,"method":false,"mode":false,"noVdomRender":false,"observeAttribute":true,"prop":true,"propBoolean":true,"propNumber":false,"propString":false,"propMutable":false,"reflect":false,"scoped":false,"shadowDom":false,"slot":true,"slotRelocation":true,"state":true,"style":true,"svg":false,"updatable":true,"vdomAttribute":true,"vdomClass":true,"vdomFunctional":true,"vdomKey":true,"vdomListener":true,"vdomRef":true,"vdomRender":true,"vdomStyle":true,"vdomText":true,"watchCallback":true,"taskQueue":true,"lazyLoad":true,"hydrateServerSide":false,"cssVarShim":true,"hydrateClientSide":false,"isDebug":false,"isDev":false,"lifecycleDOMEvents":false,"profile":false,"hotModuleReplacement":false,"constructableCSS":true,"cssAnnotations":true};
 const NAMESPACE = 'ks-widget';
 
 const win = window;
@@ -149,7 +149,7 @@ const patchEsm = () => {
 };
 const patchBrowser = async () => {
     // @ts-ignore
-    const importMeta = (typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('ks-widget-759a1237.js', document.baseURI).href));
+    const importMeta = (typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('ks-widget-740e5987.js', document.baseURI).href));
     if (importMeta !== '') {
         return Promise.resolve(new URL('.', importMeta).href);
     }
@@ -993,6 +993,11 @@ const scheduleUpdate = async (elm, hostRef, cmpMeta, isInitialLoad) => {
         hostRef.$flags$ |= 16 /* isQueuedForUpdate */;
     }
     const instance = hostRef.$lazyInstance$;
+    if (isInitialLoad) {
+        {
+            await safeCall(instance, 'componentWillLoad');
+        }
+    }
     // there is no ancestorc omponent or the ancestor component
     // has already fired off its lifecycle update then
     // fire off the initial update

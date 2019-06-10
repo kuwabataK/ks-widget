@@ -1,4 +1,4 @@
-import { d as registerInstance, e as createEvent, f as h } from './ks-widget-38d8d267.js';
+import { d as registerInstance, e as createEvent, f as h } from './ks-widget-54513e1e.js';
 function unwrapExports(x) {
     return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
@@ -8611,6 +8611,9 @@ var KsWidget = /** @class */ (function () {
         };
         this.changePosition = createEvent(this, "changePosition", 7);
     }
+    KsWidget.prototype.changePropPosition = function () {
+        this._position = Object.assign({}, this.position);
+    };
     KsWidget.prototype.changeLocked = function () {
         if (this.isLocked) {
             this.disableInteract();
@@ -8620,8 +8623,10 @@ var KsWidget = /** @class */ (function () {
             this.enableInteract();
         }
     };
+    KsWidget.prototype.componentWillLoad = function () {
+        this._position = Object.assign({}, this.position);
+    };
     KsWidget.prototype.componentDidRender = function () {
-        this._position = this.position;
         if (!this.isLocked) {
             this.enableInteract();
         }
@@ -8674,6 +8679,7 @@ var KsWidget = /** @class */ (function () {
     Object.defineProperty(KsWidget, "watchers", {
         get: function () {
             return {
+                "position": ["changePropPosition"],
                 "isLocked": ["changeLocked"]
             };
         },

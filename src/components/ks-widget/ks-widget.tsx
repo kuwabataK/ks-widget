@@ -16,6 +16,10 @@ export class KsWidget {
     width: '100px',
     height: '100px'
   }
+  @Watch('position')
+  changePropPosition() {
+    this._position = { ...this.position }
+  }
 
   @Event() changePosition: EventEmitter
 
@@ -38,14 +42,16 @@ export class KsWidget {
     height: '100px'
   }
 
+  componentWillLoad() {
+    this._position = { ...this.position }
+  }
   componentDidRender() {
-    this._position = this.position
     if (!this.isLocked) {
       this.enableInteract()
     }
   }
 
-  componentDidUnload(){
+  componentDidUnload() {
     this.disableInteract()
   }
 

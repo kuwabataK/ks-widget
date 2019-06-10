@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const __chunk_1 = require('./ks-widget-759a1237.js');
+const __chunk_1 = require('./ks-widget-740e5987.js');
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -9603,6 +9603,9 @@ class KsWidget {
         };
         this.changePosition = __chunk_1.createEvent(this, "changePosition", 7);
     }
+    changePropPosition() {
+        this._position = Object.assign({}, this.position);
+    }
     changeLocked() {
         if (this.isLocked) {
             this.disableInteract();
@@ -9612,8 +9615,10 @@ class KsWidget {
             this.enableInteract();
         }
     }
+    componentWillLoad() {
+        this._position = Object.assign({}, this.position);
+    }
     componentDidRender() {
-        this._position = this.position;
         if (!this.isLocked) {
             this.enableInteract();
         }
@@ -9662,6 +9667,7 @@ class KsWidget {
         return __chunk_1.h("div", { ref: el => this.element = el, style: this.styleString() }, __chunk_1.h("slot", null));
     }
     static get watchers() { return {
+        "position": ["changePropPosition"],
         "isLocked": ["changeLocked"]
     }; }
     static get style() { return ""; }

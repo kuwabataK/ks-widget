@@ -16,6 +16,9 @@ export class KsWidget {
             height: '100px'
         };
     }
+    changePropPosition() {
+        this._position = Object.assign({}, this.position);
+    }
     changeLocked() {
         if (this.isLocked) {
             this.disableInteract();
@@ -25,8 +28,10 @@ export class KsWidget {
             this.enableInteract();
         }
     }
+    componentWillLoad() {
+        this._position = Object.assign({}, this.position);
+    }
     componentDidRender() {
-        this._position = this.position;
         if (!this.isLocked) {
             this.enableInteract();
         }
@@ -142,6 +147,9 @@ export class KsWidget {
             }
         }]; }
     static get watchers() { return [{
+            "propName": "position",
+            "methodName": "changePropPosition"
+        }, {
             "propName": "isLocked",
             "methodName": "changeLocked"
         }]; }
